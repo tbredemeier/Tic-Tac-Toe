@@ -13,15 +13,11 @@ struct ContentView: View {
             VStack {
                 LazyVGrid(columns: Array(repeating: GridItem(.fixed(120), spacing: 15), count: 3),
                           spacing: 15, content: {
-                    Text("X")
-                    Text("X")
-                    Text("X")
-                    Text("X")
-                    Text("X")
-                    Text("X")
-                    Text("X")
-                    Text("X")
-                    Text("X")
+                            ForEach(0..<9, id: \.self) { index in
+                                Color.blue
+                                    .frame(width: 120, height: 120, alignment: .center)
+                                    .cornerRadius(30)
+                            }
                 })
             }
             .navigationTitle("Tic Tac Toe")
